@@ -66,8 +66,6 @@
     <?php if(!empty($erro)):?>
     <p style="color: red"><?= $erro ?></p>
     <?php endif; ?>
-
-
 </body>
 
 </html>

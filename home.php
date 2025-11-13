@@ -13,13 +13,10 @@
 </head>
 <body>
     <header>
-        <h1>Usuário logado</h1>
+       <?php require "nav.php" ?>
     </header>
     <main>
-        <p>Usuário: <strong><?= $_SESSION["usuario"] ?></strong></p>
-        <p>
-            <a href="index.php?rota=logout">sair</a>
-        </p>
+        <h1>Seja bem-vido</h1>
     </main>
     
 </body>

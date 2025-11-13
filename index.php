@@ -24,7 +24,10 @@
     $rotas = [
         "login" => "login.php",
         "home" => "home.php",
-        "logout" => "logout.php"
+        "logout" => "logout.php",
+        "pag1"=> "pag1.php",
+        "pag2"=> "pag2.php",
+        "pag3"=> "pag3.php"
     ];
 
     if(!key_exists($rota, $rotas)){
