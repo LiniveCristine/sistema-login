@@ -14,7 +14,7 @@
 
         //verificar se dados estão corretos (match)
         if(empty($erro)){
-            $usuarios = require_once __DIR__ . '/../login/BD/usuarios.php';
+            $usuarios = require_once __DIR__ . '/../BD/usuarios.php';
 
             foreach($usuarios as $usuarioBD){
                 if($usuarioBD["usuario"] == $usuario && password_verify($senha, $usuarioBD["senha"])){
@@ -39,33 +39,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"">
     <meta name=" viewport" content="widtg=devide-width, inicial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+     
+    <link rel="stylesheet" href="/../login/style.css">
+ 
     <title>Login</title>
 </head>
 
-<body>
-    <header>
+<body class="login">
+    <main class="container">
         <h1>Login</h1>
-    </header>
-    <section>
         <form action="index.php?rota=login" method="post">
-            <div>
-                <label for="usuario">Usuário</label>
-                <input type="email" name="usuario" id="idusuario">
+            <div class="input-box">
+                <input type="email" placeholder="Usuário" name="usuario" id="idusuario">
+                <i class="bx bxs-user"></i>
+            </div>
+            <div class="input-box" style="margin: <?= empty($erro)? '30px 0': '5px 0'  ?>;">
+                <input type="password" placeholder="Senha" name="senha" id=idsenha"">
+                <i class='bx bxs-lock-alt'></i> 
             </div>
             <div>
-                <label for="senha">Senha</label>
-                <input type="password" name="senha" id=idsenha"">
-            </div>
-            <div>
-                <input type="submit" value="Entrar">
+                <?php if(!empty($erro)):?>
+                <p class="alert"><?= $erro ?></p>
+                <?php endif; ?>
+                <button class="button" type="submit">Entrar</button>
+                
             </div>
         </form>
-    </section>
+</main>
 
-    <?php if(!empty($erro)):?>
-    <p style="color: red"><?= $erro ?></p>
-    <?php endif; ?>
+    
 </body>
 
 </html>
