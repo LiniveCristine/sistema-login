@@ -13,10 +13,13 @@
 </head>
 <body>
     <header>
-        <h1>Logado</h1>
+        <h1>Usuário logado</h1>
     </header>
     <main>
-
+        <p>Usuário: <strong><?= $_SESSION["usuario"] ?></strong></p>
+        <p>
+            <a href="index.php?rota=logout">sair</a>
+        </p>
     </main>
     
 </body>

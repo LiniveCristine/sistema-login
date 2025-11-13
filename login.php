@@ -9,7 +9,7 @@
         $senha = $_POST['senha'] ?? null;
         $erro = null;
         if(empty($usuario) || empty($senha)){
-             $erro = "Usuário ou senha invalidos";
+             $erro = "Preencha os campos";
         }
 
         //verificar se dados estão corretos (match)
@@ -21,7 +21,7 @@
                     //inserir usuario na sessão (login)
                     $_SESSION["usuario"] = $usuario;
                     
-                    //voltar para pagina inicial
+                    //entrar no home
                    header('location: index.php?rota=home');
 
                 }
@@ -51,11 +51,11 @@
         <form action="index.php?rota=login" method="post">
             <div>
                 <label for="usuario">Usuário</label>
-                <input type="text" name="usuario" id="idusuario">
+                <input type="email" name="usuario" id="idusuario">
             </div>
             <div>
                 <label for="senha">Senha</label>
-                <input type="text" name="senha" id=idsenha"">
+                <input type="password" name="senha" id=idsenha"">
             </div>
             <div>
                 <input type="submit" value="Entrar">

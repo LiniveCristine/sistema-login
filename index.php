@@ -15,10 +15,16 @@
         $rota = $_GET["rota"] ?? "home";
     }
 
+    //usuario logado não pode acessar a rota login
+    if(!empty($usuarioLogado) && $rota == "login"){
+        $rota = "home";
+    }
+
     //analisar rota
     $rotas = [
         "login" => "login.php",
-        "home" => "home.php"
+        "home" => "home.php",
+        "logout" => "logout.php"
     ];
 
     if(!key_exists($rota, $rotas)){
