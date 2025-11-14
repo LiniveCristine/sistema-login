@@ -11,12 +11,12 @@
     <link rel="stylesheet" href="/../login/style.css">
     <title>Resultado</title>
 </head>
-<body>
-    <header>
+<body class="backgound">
+    <header class="nav-links">
        <?php require "nav.php" ?>
     </header>
-    <main>
-        <h1>Seja bem-vido</h1>
+    <main >
+        <h1 class="title">Seja bem-vindo</h1>
     </main>
     
 </body>

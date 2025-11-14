@@ -7,12 +7,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=pag3, initial-scale=1.0">
+    <link rel="stylesheet" href="/../login/style.css">
     <title>pagina 1</title>
 </head>
-<body>
-    <header>
+<body class="backgound">
+    <header class="nav-links" >
         <?php require "nav.php" ?>
-        <h3>Pagina 1</h3>
     </header>
+    <main>
+        <h1 class="title">Pagina 1</h1>
+    </main>
 </body>
 </html>

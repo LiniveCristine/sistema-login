@@ -46,8 +46,8 @@
     <title>Login</title>
 </head>
 
-<body class="login">
-    <main class="container">
+<body class="backgound">
+    <main class="container" >
         <h1>Login</h1>
         <form action="index.php?rota=login" method="post">
             <div class="input-box">
